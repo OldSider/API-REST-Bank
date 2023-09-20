@@ -24,6 +24,7 @@ const updateClientAccountMiddleware = (req, res, next) => {
   const validationId = database.contas.find(
     (account) => account.numero === Number(numeroConta)
   );
+  
   if (!validationId) {
     return res.status(404).json({ mensagem: "Conta bancária Invalida!!!" });
   }
