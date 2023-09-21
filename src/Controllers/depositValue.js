@@ -15,12 +15,15 @@ const depositValue = (req, res) => {
 
   const deposit = {
     date: new Date().toDateString(),
-    numero_conta,
-    valor,
+    numero_conta: numero_conta,
+    valor: valor,
   };
 
   conta.saldo += valor;
+
   database.depositos.push(deposit);
+
+
 
   return res.status(201).json({ mensagem: "Depósito feito com sucesso!!!" });
 };
