@@ -23,8 +23,6 @@ const depositValue = (req, res) => {
 
   database.depositos.push(deposit);
 
-
-
   return res.status(201).json({ mensagem: "Depósito feito com sucesso!!!" });
 };
 
